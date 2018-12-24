@@ -1,0 +1,18 @@
+html {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+* {
+  font-family: Product Sans;
+}
+/* Colors for theme ( refer to Material Colors) */
+$primary: #f44336;
+$secondary: #cddc39;
+:export {
+  primary: $primary;
+  secondary: $secondary;
+}
