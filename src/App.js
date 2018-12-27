@@ -4,18 +4,19 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 // Import Components
-import Layout from './components/Layout.jsx';
+import Main from './components/Main.jsx';
 
 // Import SCSS files
 import variables from './index.scss';
 import './css/dashboard.scss';
 import './css/navbar.scss';
+import './css/signs.scss';
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Layout />
+        <Main />
       </MuiThemeProvider>
     );
   }
