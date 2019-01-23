@@ -11,6 +11,7 @@ import variables from './index.scss';
 import './css/dashboard.scss';
 import './css/navbar.scss';
 import './css/signs.scss';
+import './css/eventModal.scss';
 
 class App extends Component {
   render() {

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-import { Button } from '@material-ui/core';
+import Calendar from './Calendar';
 
 class Dashboard extends Component {
+
     render() {
         return (
             <div className="dashboard">
-                <h1>Hello World from Dashboard</h1>
-                <Link to='/user/7' > <Button> Go to User Profile Component </Button> </Link>
+                <div className="calendar" >
+                    <Calendar />
+                </div>
             </div>
         )
     }

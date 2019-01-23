@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import firebase from 'firebase/app';
 import fbconfig from '../fbconfig';
 import 'firebase/auth';
+import 'firebase/functions';
 
 import Layout from './Layout';
 import SignIn from './SignIn';
