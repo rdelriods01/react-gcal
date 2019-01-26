@@ -2,7 +2,7 @@
   "name": "react-gcal",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://rdelriods01.github.io/gcal",
+  "homepage": "https://rdelriods01.github.io/react-gcal/",
   "dependencies": {
     "@material-ui/core": "^3.7.1",
     "firebase": "^5.7.1",
