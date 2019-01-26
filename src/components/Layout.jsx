@@ -12,7 +12,7 @@ export class Layout extends Component {
         return (
             <div>
                 <NavBar />
-                <BrowserRouter >
+                <BrowserRouter basename={process.env.PUBLIC_URL} >
                     <Switch>
                         <Route exact path="/" render={() => <Redirect to="/db" />} />
                         <Route path="/db" component={Dashboard} />

@@ -32,7 +32,7 @@ export class Main extends Component {
         const { user } = this.state;
         return (
             <div className="main">
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL} >
                     {user ?
                         <Switch>
                             <Route exact path="/" component={Layout} />
