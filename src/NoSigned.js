@@ -5,27 +5,27 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 // Import Components
-import Layout from './components/Layout';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 // Import SCSS files
 import variables from './index.scss';
-import './css/dashboard.scss';
-import './css/navbar.scss';
 import './css/signs.scss';
-import './css/eventModal.scss';
 
-class App extends Component {
+
+class NoSigned extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Layout} />
-            <Route path="*" render={() => <Redirect to="/" />} />
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route path="*" render={() => <Redirect to="/signin" />} />
           </Switch>
         </BrowserRouter>
       </MuiThemeProvider>
-    )
+    );
   }
 }
 
@@ -38,4 +38,4 @@ const theme = createMuiTheme({
   typography: { useNextVariants: true }
 });
 
-export default App;
+export default NoSigned;
