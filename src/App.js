@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // Import Material theme provider
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 // Import Components
-import Main from './components/Main.jsx';
+import Layout from './components/Layout';
 
 // Import SCSS files
 import variables from './index.scss';
@@ -17,9 +18,14 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Main />
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Switch>
+            <Route exact path="/" component={Layout} />
+            <Route path="*" render={() => <Redirect to="/" />} />
+          </Switch>
+        </BrowserRouter>
       </MuiThemeProvider>
-    );
+    )
   }
 }
 
