@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // Firebase
 import firebase from 'firebase/app';
-import fbconfig from '../fbconfig';
 import 'firebase/auth';
 import 'firebase/functions';
 
@@ -11,7 +10,7 @@ import Layout from './Layout';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 
-const fb = firebase.initializeApp(fbconfig);
+// const fb = firebase.initializeApp(fbconfig);
 
 export class Main extends Component {
 
@@ -23,7 +22,7 @@ export class Main extends Component {
     }
 
     componentDidMount() {
-        fb.auth().onAuthStateChanged(user => {
+        firebase.auth().onAuthStateChanged(user => {
             this.setState({ user })
         })
     }
